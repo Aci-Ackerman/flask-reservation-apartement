@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Room</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Hotel AYOOIN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('user_home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('user_room') }}">Room</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('user_contact') }}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('book') }}">Book Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Daftar Kamar</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 class="card-title">Tipe kamar single</h5>
+                                        <p class="card-text"><b>Fasilitas:</b> AC, TV, Wi-Fi dan Tempat tidur single.</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <img class="img-fluid" src="{{ url_for('static', filename='gambar/kamar1.jpg') }}" alt="Kamar Deluxe" height="300">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 class="card-title">Tipe Kamar double</h5>
+                                        <p class="card-text"><b>Fasilitas:</b> AC, TV, Wi-Fi, Kamar Mandi dalam dan Tempat tidur double.</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <img class="img-fluid" src="{{ url_for('static', filename='gambar/kamar2.jpg') }}" alt="Kamar Superior" height="300">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('contact-toggle').onclick = function() {
+            var contactInfo = document.getElementById('contact-info');
+            if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
+                contactInfo.style.display = 'block';
+            } else {
+                contactInfo.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

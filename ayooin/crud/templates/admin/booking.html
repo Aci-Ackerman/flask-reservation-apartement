@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/booking.css') }}">
+    <title>Booking</title>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('book') }}">
+        <label for="no_identitas">No Identitas:</label>
+        <input type="text" id="no_identitas" name="no_identitas" required><br>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br>
+        <label for="no_hp">No Handphone:</label>
+        <input type="text" id="no_hp" name="no_hp" required><br>
+        <label for="tipe_kamar">Tipe Kamar:</label>
+        <select id="tipe_kamar" name="tipe_kamar" required>
+            <option value="single">Single Bedroom</option>
+            <option value="double">Double Bedroom</option>
+        </select><br>
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" name="checkin" required><br>
+        <label for="checkout">Check-out Date:</label>
+        <input type="date" id="checkout" name="checkout" required><br>
+        <label for="jumlah_kamar">Jumlah Kamar:</label>
+        <input type="number" id="jumlah_kamar" name="jumlah_kamar" required><br>
+        <button type="submit">Book</button>
+    </form>
+    <script>
+        document.getElementById('contact-toggle').onclick = function() {
+            var contactInfo = document.getElementById('contact-info');
+            if (contactInfo.style.display === 'none') {
+                contactInfo.style.display = 'block';
+            } else {
+                contactInfo.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

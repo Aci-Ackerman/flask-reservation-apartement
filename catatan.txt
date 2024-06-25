@@ -1,0 +1,30 @@
+# AYOOIN - Penyewaan Apart
+
+# Cara menjalankan Project Penyewaan Apart
+
+Pertama, buat database dengan nama db_perhotelan:
+
+Kemudian import file db_perhotelan.sql 
+
+Lanjut, buat virtual environment yang digunakan:
+
+python -m venv venv
+
+aktifkan virtual environment:
+
+./venv/Scripts/activate
+
+Install packages yang digunakan: <br/>
+
+pip install flask
+pip install PyMySQL
+pip install SQLAlchemy
+
+`cd` ke ayooin\crud
+
+flask run atau python app.py
+
+Akun untuk login :
+Admin : 1. email : admin@gmail.co password: admin123
+Users : 1. email : nicho@gmail.com password : nicho123
+        2. email : dika@gmail.com password : dika123

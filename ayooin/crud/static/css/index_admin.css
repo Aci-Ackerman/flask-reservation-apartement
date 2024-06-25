@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Warna latar belakang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.table {
+    background-color: #fff; /* Warna latar belakang tabel */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+#successAlert {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}

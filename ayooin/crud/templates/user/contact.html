@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/contact.css') }}">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Hotel AYOOIN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('user_home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('user_room') }}">Room</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('user_contact') }}" id="contact-toggle">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('book') }}">Book Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="contact-info" id="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> AYOOINt@ayooin.com</p>
+            <p><strong>Phone:</strong> 123-456-7890</p>
+
+            <!-- Card Instagram -->
+            <div class="card">
+                <div class="card-body">
+                    <i class="fab fa-instagram"></i> <!-- Icon Instagram dari FontAwesome -->
+                    <p class="card-text">Follow us on Instagram <br> @hotelayooin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('contact-toggle').onclick = function() {
+            var contactInfo = document.getElementById('contact-info');
+            if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
+                contactInfo.style.display = 'block';
+            } else {
+                contactInfo.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
+

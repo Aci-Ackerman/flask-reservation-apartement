@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_user.css') }}">
+    <title>User Home</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('user_home') }}">Home</a></li>
+            <li><a href="{{ url_for('user_room') }}">Room</a></li>
+            <li><a href="{{ url_for('user_contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('book') }}">Book Now</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+    </nav>
+    <h1>Welcome To AYOOIN!</h1> 
+
+    <script>
+        document.getElementById('contact-toggle').onclick = function() {
+            var contactInfo = document.getElementById('contact-info');
+            if (contactInfo.style.display === 'none') {
+                contactInfo.style.display = 'block';
+            } else {
+                contactInfo.style.display = 'none';
+            }    
+        };
+    </script>
+</body>
+</html>
